@@ -12,3 +12,99 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.like-icon.is-liked .core {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .sparks {
+  animation-name: show_sparks;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+.like-icon.is-liked .heart {
+  animation-name: change_scale;
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.like-icon:not(is-liked) .contour {
+  fill: var(--heart-contour-color);
+  transition: fill 0.1s linear;
+}
+.card__icon-button:hover {
+  .core {
+    fill: var(--text-color);
+    transition: fill 0.3s linear;
+  }
+  .main-body {
+    fill: var(--text-color);
+    transition: fill 0.3s linear 0.05s;
+  }
+}
+.card__icon-button::after {
+  .core {
+    fill: none;
+    transition: fill 0.3s linear 0.03s;
+  }
+  .main-body {
+    fill: var(--text-color);
+    transition: fill 0.3s linear;
+  }
+}
+.card__icon-button:active {
+  .core {
+    fill: var(--heart-body-color);
+    transition: fill 0.3s linear;
+  }
+  .main-body {
+    fill: var(--heart-body-color);
+    transition: fill 0.3s linear 0.05s;
+  }
+}
+
+@keyframes moving {
+  from {
+    margin-left: -15px;
+  }
+
+  to {
+    margin-left: -19px;
+  }
+}
+
+@keyframes show_sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes change_scale {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.5;
+  }
+}
