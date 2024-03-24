@@ -15,8 +15,7 @@
     --label-color: rgba(0, 0, 0, 0.5);
     --heart-contour-color: #00CC14;
     --heart-body-color: #FF0000;
-
-
+    --button-text-color: var(--text-color);
 }
 
 :root.theme-light {
@@ -30,6 +29,7 @@
     --label-color: rgba(255, 255, 255, 0.5);
     --heart-contour-color: #000000;
     --heart-body-color: #FF0000;
+    --button-text-color: var(--page-background-color);
 
 
 }
@@ -47,6 +47,7 @@
       --label-color: rgba(0, 0, 0, 0.5);
       --heart-contour-color: #00CC14;
       --heart-body-color: #FF0000;
+      --button-text-color: var(--text-color);
 
 
     }

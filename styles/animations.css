@@ -12,6 +12,11 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+/* .heart {
+width: 27px;
+height: 24px;
+} */
+
 .like-icon.is-liked .core {
   fill: var(--heart-body-color);
   transition: fill 0.3s linear;
