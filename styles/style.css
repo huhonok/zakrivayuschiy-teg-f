@@ -71,7 +71,6 @@
   padding-top: 136px;
 }
 
-
 .header__content__section__title {
   font-family: var(--accent-font-family);
   font-variation-settings: "wght" var(--min-font-weight);
@@ -247,7 +246,6 @@
   mix-blend-mode: difference;
   z-index: 1;
 }
-
 
 .footer {
   display: flex;
@@ -425,7 +423,7 @@ dialog::backdrop {
   .post__image {
     min-height: 375px;
   }
-  
+
   .header__content__section__logo_title {
     padding-top: 120px;
   }
@@ -440,12 +438,12 @@ dialog::backdrop {
   }
 
   .save__button__icon {
-    transform: scale(1.0);
+    transform: scale(1);
   }
 
   .footer__save__button {
     width: 306px;
-    height: 84px;  
+    height: 84px;
     flex-direction: column;
   }
 }
