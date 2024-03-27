@@ -277,6 +277,7 @@
 .dialog__submit__button {
   width: 100%;
   cursor: pointer;
+  height: 38px;
 }
 
 dialog::backdrop {
@@ -378,9 +379,6 @@ dialog::backdrop {
   transition: border 0.3s;
   transition-timing-function: ease;
 }
-.dialog__submit__button {
-  height: 38px;
-}
 
 .dialog__content__text {
   line-height: 21px;
@@ -460,7 +458,7 @@ dialog::backdrop {
   }
 
   .dialog__window {
-    width: 336px;
+    width: 341px;
     height: 191px;
   }
 }
