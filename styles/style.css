@@ -85,7 +85,6 @@
   font-variation-settings: "wght" var(--min-font-weight);
   text-transform: uppercase;
   line-height: 23px;
-  letter-spacing: 0em;
   text-align: left;
   box-sizing: border-box;
   padding-top: 20px;
@@ -124,6 +123,10 @@
   row-gap: 27px;
 }
 
+.post__text:last-child {
+  row-gap: 25px;
+}
+
 .post__header {
   color: var(--text-color);
   font-size: 18px;
@@ -140,7 +143,6 @@
   border-color: black;
   background-color: var(--page-background-color);
   border: 2px solid var(--text-color);
-  /* max-height: 959px; */
   max-width: 696px;
 }
 
@@ -151,7 +153,7 @@
   font-variation-settings: "wght" var(--min-font-weight);
   line-height: 21px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: start;
 }
 
 .post__image__wrapper {
@@ -188,7 +190,6 @@
   display: flex;
   box-sizing: border-box;
   padding-left: 25px;
-  /* gap: 12px; */
   justify-content: end;
 }
 
@@ -199,12 +200,11 @@
   padding-left: 5px;
   padding-right: 5px;
   cursor: pointer;
+  height: 38px;
 }
 
 .like-icon {
   color: var(--text-color);
-  /* width: 27px;
-  height: 24px; */
 }
 
 .card__like-button {
@@ -217,8 +217,7 @@
   height: 55px;
 }
 
-.footer__save__button,
-.card__like-button {
+.button__common__styles {
   border: 2px solid var(--text-color);
   cursor: pointer;
   background: linear-gradient(to right, var(--text-color) 50%, transparent 50%);
@@ -233,6 +232,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
+  align-self: flex-start;
 }
 
 .button__text {
@@ -243,8 +243,6 @@
   letter-spacing: 0em;
   color: var(--button-text-color);
   position: relative;
-  mix-blend-mode: difference;
-  z-index: 1;
 }
 
 .footer {
@@ -260,9 +258,10 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 30px 42px;
+  padding: 30px 40px;
   gap: 30px;
-  width: 341px;
+  width: 357px;
+  height: 193px;
   background-color: var(--page-background-color);
   border: 2px solid var(--text-color);
 }
@@ -271,23 +270,18 @@
   display: flex;
   flex-direction: row;
   height: 63px;
+  text-transform: uppercase;
+  gap: 20px;
 }
 
 .dialog__submit__button {
   width: 100%;
-  height: 38px;
-  background-color: transparent;
-  border: 2px solid var(--text-color);
   cursor: pointer;
 }
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.3);
   backdrop-filter: blur(7px);
-}
-
-.svg-floppy-dialog {
-  align-self: center;
 }
 
 .theme-menu__button:disabled::before {
@@ -347,25 +341,35 @@ dialog::backdrop {
 
 .card__like-button:focus,
 .card__icon-button:focus,
-.footer__save__button:focus {
+.footer__save__button:focus,
+.dialog__submit__button:focus {
   outline: none;
 }
 
 .card__like-button:focus,
-.footer__save__button:focus {
+.footer__save__button:focus,
+.dialog__submit__button:focus {
   box-shadow: 2px 2px 0 var(--text-color);
   transition: box-shadow 0.3s;
   transition-timing-function: ease;
 }
 
 .footer__save__button:hover,
-.card__like-button:hover {
+.card__like-button:hover,
+.dialog__submit__button:hover {
   background-position: left bottom;
 }
 
 .save__button__icon {
+  height: 21px;
+  width: 21px;
+}
+
+.button__text,
+.save__button__icon,
+.dialog__submit__button__icon {
   mix-blend-mode: difference;
-  transform: scale(0.75);
+  align-self: center;
   z-index: 1;
 }
 
@@ -373,6 +377,13 @@ dialog::backdrop {
   border: 2px solid var(--text-color);
   transition: border 0.3s;
   transition-timing-function: ease;
+}
+.dialog__submit__button {
+  height: 38px;
+}
+
+.dialog__content__text {
+  line-height: 21px;
 }
 
 .sparks {
@@ -438,12 +449,18 @@ dialog::backdrop {
   }
 
   .save__button__icon {
-    transform: scale(1);
+    height: 28px;
+    width: 28px;
   }
 
   .footer__save__button {
     width: 306px;
     height: 84px;
     flex-direction: column;
+  }
+
+  .dialog__window {
+    width: 336px;
+    height: 191px;
   }
 }

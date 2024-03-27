@@ -125,7 +125,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -190,7 +190,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -253,7 +253,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -318,7 +318,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -384,7 +384,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -447,7 +447,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -512,7 +512,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -579,7 +579,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button__common__styles">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -588,29 +588,39 @@
     </main>
     <footer class="footer">
       <button
-        class="footer__save__button"
+        class="footer__save__button button__common__styles"
         type="button"
         onclick="window['dialog-id'].showModal();"
         aria-controls="dialog-id"
       >
-        <svg class="save__button__icon" height="28" width="28">
-          <use xlink:href="./svg/floppy.svg#svg-floppy"></use>
-        </svg>
+        <div class="save__button__icon">
+          <svg viewBox="0 0 39 39">
+            <use xlink:href="./svg/floppy.svg#svg-floppy"></use>
+          </svg>
+        </div>
         <span class="button__text">Сохранить на память</span>
       </button>
       <dialog id="dialog-id">
         <form method="dialog" class="dialog__window">
           <div class="dialog__content">
-            <svg class="svg-floppy-dialog">
-              <use
-                xlink:href="./svg/floppy.svg#svg-floppy"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              ></use>
-            </svg>
-            <p class="button__text">Вставьте дискету, чтобы продолжить</p>
+            <div class="dialog__submit__button__icon">
+              <svg width="39" height="39">
+                <use
+                  xlink:href="./svg/floppy.svg#svg-floppy"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                ></use>
+              </svg>
+            </div>
+
+            <p class="button__text dialog__content__text">
+              Вставьте дискету, чтобы продолжить
+            </p>
           </div>
-          <button class="button__text dialog__submit__button" type="submit">
-            ок
+          <button
+            class="button__common__styles dialog__submit__button"
+            type="submit"
+          >
+            <span class="button__text">ок</span>
           </button>
         </form>
       </dialog>
