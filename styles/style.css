@@ -171,6 +171,7 @@
   right: 13px;
   text-shadow: 0 0 1px var(--label-color);
   mix-blend-mode: hard-light;
+  z-index: 2;
 }
 
 @supports (
