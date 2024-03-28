@@ -24,7 +24,7 @@
   font-family: var(--main-font-family), sans-serif;
   color: var(--text-color);
   background-image: repeating-linear-gradient(
-      to left,
+      to right,
       var(--repeating-gradient-color),
       transparent 2px
     ),
@@ -40,6 +40,7 @@
     );
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .header {
@@ -74,8 +75,8 @@
 .header__content__section__title {
   font-family: var(--accent-font-family);
   font-weight: var(--min-font-weight);
-  line-height: 65px;
-  font-size: 65px;
+  line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -108,7 +109,6 @@
   letter-spacing: 0em;
   cursor: pointer;
   text-transform: uppercase;
-  /* transition:  */
 }
 
 .posts {
@@ -186,7 +186,7 @@
   }
 }
 .post__image {
-  min-height: 696px;
+  width: 100%;
 }
 
 .card_buttons {
@@ -430,17 +430,8 @@ dialog::backdrop {
     max-width: 375px;
   }
 
-  .post__image {
-    min-height: 375px;
-  }
-
   .header__content__section__logo_title {
     padding-top: 120px;
-  }
-
-  .header__content__section__title {
-    line-height: 49px;
-    font-size: 49px;
   }
 
   .header__content__section__paragraph__title {
