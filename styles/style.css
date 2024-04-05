@@ -217,12 +217,15 @@
   gap: 8px;
   align-self: flex-start;
   position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
 .button__common__styles:focus {
   outline: none;
+}
+
+.button__common__styles:focus-visible {
   box-shadow: 2px 2px 0 var(--text-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button__common__styles::before {
